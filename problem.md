@@ -1,10 +1,10 @@
 finding even odd
 
-START
-  INPUT n
-  IF n % 2 == 0 THEN
-    PRINT "The number is even."
-  ELSE
-    PRINT "The number is odd."
-  ENDIF
-END
+START <br>
+  INPUT n<br>
+  IF n % 2 == 0 THEN <br>
+    PRINT "The number is even." <br>
+  ELSE <br>
+    PRINT "The number is odd." <br>
+  ENDIF <br>
+END <br>
