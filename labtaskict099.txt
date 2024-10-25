@@ -1,0 +1,37 @@
+let participant=[];
+let attendance=[];
+function registerParticipant(name){
+    if(name&&typeof name==='string'){
+        participant.push(name);
+        console.log(`${name} has been registered`);
+    }
+    else {
+        console.log("pls enter valid name");
+    }
+}
+function markAttendance(name){
+    if(participant.includes(name)){
+        attendance.push(name);
+        console.log(`${name} is present`);
+    }
+    else{
+    console.log(`${name} is not registered`);
+    }
+}
+function generateAttendanceReport(){
+    const uniqueAttendance=[...new set(attendance)];
+    uniqueAttendance.sort();
+    return{
+        totalregistered:participant.length,
+        totalattended:uniqueAttendance.length,
+        attendees:uniqueAttendance,
+    };
+}
+registerParticipant("alice");
+registerParticipant("bob");
+registerParticipant("david");
+markAttendance("alice");
+markAttendance("bob");
+markAttendance("charlie");
+const report=generateAttendanceReport();
+console.log(report);
